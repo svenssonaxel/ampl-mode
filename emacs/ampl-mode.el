@@ -1,19 +1,15 @@
-;;; ampl-mode.el --- Ampl mode for the Emacs editor
+;;; ampl-mode.el --- Major mode for editing Ampl files
 
 ;; Filename: ampl-mode.el
-;; Author: Dominique Orban <dominique.orban@gmail.com>
 ;; Copyright (C) 2003, 2008, Dominique Orban, all rights reserved.
-;; Keywords: Ampl
+;; Homepage: https://github.com/dpo/ampl-mode
 ;; Version: 0.1
 ;; Time stamp: "Wed 25 Sep 2013 10:55:10 EDT"
 
-;; Purpose: Provides syntax highlighting and basic indentation for
-;;  models written in Ampl. Ampl is a modeling language for
-;;  optimization programs.  See www.ampl.com for more information.
-;;  This file is still under development, features will be added as
-;;  time allows. One of these, which I hope to provide in the
-;;  not-too-distant future is the ability to run an Ampl process in an
-;;  Emacs window to facilitate model debugging and running.
+;; The following code is a derivative work of the code written by Dominique Orban,
+;; which is licensed GPLv3. This code therefore is also licensed under the terms
+;; of the GNU Public License, verison 3.
+
 
 ;; If you find this mode useful, please let me know <dominique.orban@gmail.com>
 
@@ -33,6 +29,17 @@
 ;; along with the Emacs program; see the file COPYING.  If not, write
 ;; to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 ;; Boston, MA 02111-1307, USA.
+
+;;; Commentary:
+
+;; Provides syntax highlighting and basic indentation for
+;; models written in Ampl. Ampl is a modeling language for
+;; optimization programs.  See www.ampl.com for more information.
+;; This file is still under development, features will be added as
+;; time allows. One of these, which I hope to provide in the
+;; not-too-distant future is the ability to run an Ampl process in an
+;; Emacs window to facilitate model debugging and running.
+
 
 ;; ======================  C O D E  ================================
 
@@ -62,7 +69,7 @@
   (define-key ampl-mode-map "{"     'ampl-insert-curlies)
   (define-key ampl-mode-map "\""    'ampl-insert-double-quotes)
   (define-key ampl-mode-map "'"     'ampl-insert-single-quotes)
-  (define-key ampl-mode-map "\C-co" 'ampl-insert-comment))
+  (define-key ampl-mode-map "\C-ao" 'ampl-insert-comment))
 
 ;; Files whose extension is .mod, .dat or .ampl will be edited in Ampl mode
 (setq auto-mode-alist
