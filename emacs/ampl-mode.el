@@ -96,6 +96,9 @@ single quotes.")
 ;; Associate file extensions .mod, .dat and .ampl with ampl-mode
 (add-to-list 'auto-mode-alist '("\\(.mod\\|.dat\\|.ampl\\)\\'" . ampl-mode))
 
+;; Associate ampl interpreter with ampl-mode
+(add-to-list 'interpreter-mode-alist '("ampl" . ampl-mode))
+
 ;; Highlighting
 (defconst ampl-font-lock
   '(
